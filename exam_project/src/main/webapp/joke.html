@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jokes</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    </head>
+    <body>
+        <h1>Her er der super fede jokes.</h1>
+
+        <div id="randomJoke" >
+            <h3 id="joke"></h3>
+            <p id="creator"></p>
+
+            <fieldset>
+                <legend>Vær sød at giv joken en score efter hvor sjov den var.</legend>
+                <div>
+                    <form onsubmit="return false" id="pointForm" name ="pointForm" onclick="dispVote()">
+                        <input type="radio" name="point" value="1"> 1
+                        <input type="radio" name="point" value="2"> 2
+                        <input type="radio" name="point" value="3"> 3
+                        <input type="radio" name="point" value="4"> 4
+                        <input type="radio" name="point" value="5"> 5
+                        <input id="vote" type="submit" onclick="post()" style="display:none;">
+                    </form>
+                </div>
+            </fieldset>
+        </div>
+    <div>
+    
+
+        <div id="RightSide">
+            <div id="index">
+            <div>
+                <span>Hello,</span>
+                <form>
+                    <input autofocus autocomplete="off" name="username" type="text" placeholder="username">
+                </form>
+            </div>
+        </div>
+        <div class="inactive">
+            <div class="messages-container">
+                <ul id ="chat">
+                    <li class="sender">system</li>
+                    <li class="message">Velkommen til vores side, vær velkommen til at anvende vores live chat. For at state, indtast et brugernavn og tryk enter.</li>
+                </ul>
+            </div>
+            <footer>
+                <div id="editor" style="display:none">
+                    <div contenteditable data-placeholder="Type a message..."></div>
+                </div>
+            </footer>
+        </div>
+        </div>
+            
+        <div id="scoreboad">
+            <table >
+                <thead class="table ">
+                    <tr>
+                        <th>Forfatter</th>
+                        <th>Score</th>
+                        <th>Stemmer</th>
+                        <th>id</th>
+                    </tr>
+                </thead>
+                <tbody id="table" class="table table-hover" onclick="jokeID(event)">
+
+                </tbody>
+            </table>
+        </div>
+        <div id="like_button_container"></div>
+        <div id="haddock">
+            <p></p>
+        </div>
+
+        <div id="system" class="messages-container">
+            <ul id="stream">
+                <li class="sender">live info om joke status</li>
+            </ul>
+        </div>
+    </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/cettia-client@latest/cettia-browser.js"></script>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/jokeScript.js"></script>
+        <script src="js/realtime.js"></script>
+        <script src="js/chat.js"></script>
+
+    </body>
+</html>
